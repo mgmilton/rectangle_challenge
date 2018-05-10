@@ -3,8 +3,6 @@ var myRectangle = {
   // Coordinates of bottom-left corner
   leftX: 1,
   bottomY: 1,
-
-  // Width and height
   width: 2,
   height: 2,
 };
