@@ -9,7 +9,6 @@ var myRectangle = {
   height: 2,
 
 };
-
 var secondRectangle = {
   leftX: 1,
   bottomY: 4,
