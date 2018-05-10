@@ -1,4 +1,4 @@
-const myRectangle = {
+var myRectangle = {
 
   // Coordinates of bottom-left corner
   leftX: 1,
@@ -10,12 +10,12 @@ const myRectangle = {
 
 };
 
-const secondRectangle = {
-  leftX: 1,
-  bottomY: 1,
+var secondRectangle = {
+  leftX: 5,
+  bottomY: 2,
 
-  width: 6,
-  height: 3,
+  width: 3,
+  height: 4,
 }
 
 
@@ -50,7 +50,7 @@ class LoveIntersection {
   setWidth(rectangle1, rectangle2){
     var rectangle1MaxX = rectangle1.leftX + rectangle1.width
     var rectangle2MaxX = rectangle2.leftX + rectangle2.width
-    if (rectangle1MaxX <= rectanagle2MaxX){
+    if (rectangle1MaxX <= rectangle2MaxX){
       this.intersectRectangle.width = rectangle1MaxX - rectangle2.leftX
     } else {
       this.intersectRectangle.width = rectangle2MaxX - rectangle2.leftX
@@ -60,7 +60,7 @@ class LoveIntersection {
   setHeight(rectangle1, rectangle2){
     var rectangle1MaxY = rectangle1.bottomY + rectangle1.height
     var rectangle2MaxY = rectangle2.bottomY + rectangle2.height
-    if (rectangle1MaxY <= rectanagle2MaxY){
+    if (rectangle1MaxY <= rectangle2MaxY){
       this.intersectRectangle.height = rectangle1MaxY - rectangle2.bottomY
     } else {
       this.intersectRectangle.height = rectangle2MaxY - rectangle2.bottomY
@@ -68,10 +68,10 @@ class LoveIntersection {
   }
 
   findLove(rectangle1, rectangle2){
-    setLeftX(rectangle1, rectangle2)
-    setbottomY(rectangle1, rectangle2)
-    setWidth(rectangle1, rectangle2)
-    setHeight(rectangle1, rectangle2)
+    this.setLeftX(rectangle1, rectangle2);
+    this.setBottomY(rectangle1, rectangle2);
+    this.setWidth(rectangle1, rectangle2);
+    this.setHeight(rectangle1, rectangle2);
     return this.intersectRectangle
   }
 }
