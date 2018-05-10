@@ -5,18 +5,18 @@ var myRectangle = {
   bottomY: 1,
 
   // Width and height
-  width: 6,
-  height: 3,
+  width: 2,
+  height: 2,
 
 };
 
 var secondRectangle = {
-  leftX: 5,
-  bottomY: 2,
+  leftX: 1,
+  bottomY: 4,
 
-  width: 3,
-  height: 4,
-}
+  width: 2,
+  height: 2,
+};
 
 
 class LoveIntersection {
@@ -30,6 +30,13 @@ class LoveIntersection {
     }
   }
 
+  noOverlap(rectangle1, rectangle2){
+    var rectangle1MaxX = rectangle1.leftX + rectangle1.width
+    var rectangle1MaxY = rectangle1.bottomY + rectangle1.height
+    if (rectangle1MaxX <= rectangle2.leftX || rectangle1MaxY <= rectangle2.bottomY){
+      return true;
+    }
+  }
 
   setLeftX(rectangle1, rectangle2){
     if (rectangle1.leftX <= rectangle2.leftX){
@@ -68,10 +75,14 @@ class LoveIntersection {
   }
 
   findLove(rectangle1, rectangle2){
-    this.setLeftX(rectangle1, rectangle2);
-    this.setBottomY(rectangle1, rectangle2);
-    this.setWidth(rectangle1, rectangle2);
-    this.setHeight(rectangle1, rectangle2);
-    return this.intersectRectangle
+    if (this.noOverlap(rectangle1, rectangle2) === true){
+      return "There is no overlap between these rectangles"
+    } else {
+      this.setLeftX(rectangle1, rectangle2);
+      this.setBottomY(rectangle1, rectangle2);
+      this.setWidth(rectangle1, rectangle2);
+      this.setHeight(rectangle1, rectangle2);
+      return this.intersectRectangle
+    }
   }
 }
