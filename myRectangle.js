@@ -1,10 +1,10 @@
 var myRectangle = {
-
   leftX: 1,
   bottomY: 1,
   width: 2,
   height: 2,
 };
+
 var secondRectangle = {
   leftX: 1,
   bottomY: 4,
