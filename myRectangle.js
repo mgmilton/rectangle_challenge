@@ -86,3 +86,5 @@ class LoveIntersection {
     }
   }
 }
+
+module.exports = LoveIntersection
