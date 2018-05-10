@@ -1,6 +1,5 @@
 var myRectangle = {
 
-  // Coordinates of bottom-left corner
   leftX: 1,
   bottomY: 1,
   width: 2,
